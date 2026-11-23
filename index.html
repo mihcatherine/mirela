@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#566b2f">
+<meta name="description" content="Makaria — gestão financeira pessoal com propósito.">
+<title>Makaria | Gestão Financeira</title>
+<link rel="icon" href="./logo.svg">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="toast" aria-live="polite"></div>
+<section id="auth" class="auth">
+  <div class="auth-card">
+    <div class="brand"><img src="./logo.svg" alt="Logo Makaria"><div><b>MAKARIA</b><small>Onde Prosperidade Encontra Plenitude.</small></div></div>
+    <div class="hero"><span class="eyebrow">Gestão Financeira Inteligente</span><h1>Seu Dinheiro, Com Propósito.</h1><p>Organize sua vida financeira, acompanhe seus objetivos e tome decisões com mais clareza.</p></div>
+    <div class="tabs"><button class="active" data-mode="login" type="button">Entrar</button><button data-mode="signup" type="button">Criar Conta</button></div>
+    <form id="authForm">
+      <label id="nameBox" class="hide">Nome Completo<input id="name" autocomplete="name"></label>
+      <label>E-mail<input id="email" type="email" autocomplete="email" required></label>
+      <label>Senha<input id="pass" type="password" minlength="8" autocomplete="current-password" required></label>
+      <button class="primary" id="authBtn">Entrar</button><p id="authMsg"></p>
+    </form>
+    <small class="sign">Criado por Mirela Catherine de Oliveira.</small>
+  </div>
+</section>
+<section id="app" class="hide">
+<header class="topbar">
+  <div class="brand mini"><img src="./logo.svg" alt="Logo Makaria"><div><b>MAKARIA</b><small>Onde Prosperidade Encontra Plenitude.</small></div></div>
+  <div class="head"><span id="hello"></span><button id="hideValues" class="icon-btn" type="button" title="Ocultar valores">◉</button><button id="theme" class="icon-btn" type="button" title="Trocar tema">☾</button><button id="profileBtn" class="avatar-btn" type="button" title="Perfil e configurações">MC</button><button id="logout" class="ghost-btn" type="button">Sair</button></div>
+</header>
+<div class="layout">
+  <aside><nav id="mainNav"></nav><small>Makaria · Criado por Mirela Catherine de Oliveira.</small></aside>
+  <main id="main"></main>
+</div>
+<div class="bottom-nav"><button data-page="home">⌂<span>Início</span></button><button data-page="transactions">↕<span>Lançamentos</span></button><button id="centralPlus" class="plus" type="button">+</button><button data-page="planning">◫<span>Planejamento</span></button><button data-page="analysis">◈<span>Análises</span></button></div>
+<div id="modal" class="modal-backdrop hide"></div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/appwrite@29.0.0"></script>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
